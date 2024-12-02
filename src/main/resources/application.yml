@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: AgencyAuthService
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
