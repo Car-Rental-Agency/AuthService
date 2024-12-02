@@ -12,5 +12,7 @@ public record DataCustomerRequest(
         @Email(message = "Invalid recovery email format")
         String recoveryEmail,
         @Pattern(regexp = "^\\+?[1-9]\\d{1,14}$", message = "Invalid phone number format. Must start with + and contain 1-14 digits")
-        String phone
+        String phone,
+        String agencyname,
+        String adresse
 ) {}

@@ -34,12 +34,13 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException {
         OAuth2User oAuth2User = (OAuth2User) authentication.getPrincipal();
         String email = oAuth2User.getAttribute("email");
+        String fullName = oAuth2User.getAttribute("given_name") + " " + oAuth2User.getAttribute("family_name");
 
         Customer customer = customerRepository.findByEmail(email)
                 .orElseGet(() -> {
                     Customer newCustomer = new Customer();
                     newCustomer.setEmail(email);
-                    newCustomer.setFullName(usernameGenerator.generateUsername());
+                    newCustomer.setFullName(fullName);
                     newCustomer.setLastLogin(LocalDateTime.now());
                     return customerRepository.save(newCustomer);
                 });

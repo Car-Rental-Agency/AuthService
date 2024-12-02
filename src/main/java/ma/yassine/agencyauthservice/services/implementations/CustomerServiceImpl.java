@@ -35,6 +35,14 @@ public class CustomerServiceImpl implements CustomerService {
                 .filter(phone -> !phone.trim().isEmpty())
                 .ifPresent(customer::setPhone);
 
+        Optional.ofNullable(request.agencyname())
+                .filter(agencyname -> !agencyname.trim().isEmpty())
+                .ifPresent(customer::setAgencyname);
+
+        Optional.ofNullable(request.adresse())
+                .filter(adresse -> !adresse.trim().isEmpty())
+                .ifPresent(customer::setAdresse);
+
         return customerRepository.save(customer);
     }
 }
