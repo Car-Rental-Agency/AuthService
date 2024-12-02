@@ -1,4 +1,4 @@
-package ma.yassine.agencyauthservice.exeptions;
+package ma.yassine.agencyauthservice.exceptions;
 
 import java.time.LocalDateTime;
 import java.util.Map;

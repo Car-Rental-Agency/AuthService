@@ -4,7 +4,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import ma.yassine.agencyauthservice.dtos.DataCustomerRequest;
 import ma.yassine.agencyauthservice.entities.Customer;
-import ma.yassine.agencyauthservice.exeptions.UnauthorizedException;
+import ma.yassine.agencyauthservice.exceptions.UnauthorizedException;
 import ma.yassine.agencyauthservice.services.interfaces.CustomerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

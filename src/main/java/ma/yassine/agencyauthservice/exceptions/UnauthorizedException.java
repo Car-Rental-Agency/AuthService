@@ -1,4 +1,4 @@
-package ma.yassine.agencyauthservice.exeptions;
+package ma.yassine.agencyauthservice.exceptions;
 
 public class UnauthorizedException extends Exception {
     public UnauthorizedException(String message) {

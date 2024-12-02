@@ -3,7 +3,7 @@ package ma.yassine.agencyauthservice.services.implementations;
 import lombok.RequiredArgsConstructor;
 import ma.yassine.agencyauthservice.dtos.DataCustomerRequest;
 import ma.yassine.agencyauthservice.entities.Customer;
-import ma.yassine.agencyauthservice.exeptions.UnauthorizedException;
+import ma.yassine.agencyauthservice.exceptions.UnauthorizedException;
 import ma.yassine.agencyauthservice.repositories.CustomerRepository;
 import ma.yassine.agencyauthservice.services.interfaces.CustomerService;
 import ma.yassine.agencyauthservice.utils.SecurityUtils;

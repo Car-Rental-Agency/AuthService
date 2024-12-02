@@ -3,7 +3,7 @@ package ma.yassine.agencyauthservice.utils;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import ma.yassine.agencyauthservice.entities.Customer;
-import ma.yassine.agencyauthservice.exeptions.UnauthorizedException;
+import ma.yassine.agencyauthservice.exceptions.UnauthorizedException;
 import ma.yassine.agencyauthservice.repositories.CustomerRepository;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
